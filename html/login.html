@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <script src="https://kit.fontawesome.com/6dd91a6e50.js" crossorigin="anonymous"></script>
+  </head>
+  <link rel="stylesheet" href="../css/login.css">
+  <body>
+    <div class="position">
+      <form id="form">
+        <div>
+          
+          <h2>Login</h2>
+          
+          <div class="center">
+            <input
+              type="text"
+              id="signUpeEmail"
+              size="55"
+              autocomplete="on"
+              required
+              placeholder="아이디"
+            />
+          </div>
+          <div class="center1">
+            <input
+              type="password"
+              id="signUpePassword"
+              size="55"
+              autocomplete="on"
+              required
+              placeholder="비밀번호"
+            />
+          </div>
+    
+        </div>
+      </form>
+      <div class="bar">
+        <ul>
+            <button type="submit" id="button" onclick="location.href='../html f/signIn.html'">회원가입하기</button>
+            <button type="submit" onclick="location.href='../html/main.html'">로그인하기</button>
+        </ul> 
+      </div>
+      
+    </div>
+
+    <script src="../js/Login.js" type="module"></script>
+  </body>
+</html>

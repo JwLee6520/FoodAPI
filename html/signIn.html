@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입하기</title>
+    <script src="https://kit.fontawesome.com/6dd91a6e50.js" crossorigin="anonymous"></script>
+</head>
+
+<link rel="stylesheet" href="../css/signIn.css">
+
+<body>
+    <div class="container">
+        <h2>회원가입</h2>
+        <form id="form">
+            <label for="signUpEmail">이메일</label>
+            <input type="email" id="signUpEmail" name="email" required placeholder="학교 이메일">
+            
+            <label for="signUpPassword">비밀번호</label>
+            <input type="password" id="signUpPassword" name="password" required placeholder="6자리 이상 비밀번호">
+            
+            <label for="confirmPassword">비밀번호 확인</label>
+            <input type="password" id="confirmPassword" name="confirm-password" required placeholder="비밀번호 재확인">
+            
+            <button type="submit" id="button">회원가입하기</button>
+            <button type="button" onclick="location.href='./login.html'">로그인하기</button>
+        </form>
+    </div>
+    <script src="../js/SignIn.js" type="module"></script>
+</body>
+

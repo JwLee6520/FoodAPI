@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  h2 {
+    margin-top: 10px;
+    color: purple;
+    font-size: 32px;
+    text-align: center;
+  }
+  legend {
+    text-align: center;
+  }
+  .position {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  form {
+    width: 450px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 12.5px rgba(51, 51, 51, 0.5);
+    margin: auto;
+    height: 300px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  form > div {
+    text-align: center;
+    width: 450px;
+    height: 250px;
+  }
+  form > div > .bottom > a {
+    display: block;
+    padding-left: 10px;
+    margin: 0 auto;
+    width: 400px;
+    background-color: rgb(163, 97, 163);
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+  }
+  form > div > .center > input {
+    height: 60px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    margin-top: 6px;
+    padding-left: 10px;
+
+  }
+  form > div > .center1 > input {
+    height: 60px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    margin-top: 6px;
+    padding-left: 10px;
+    margin-top: 20px;
+  }
+  fieldset > div > .center > input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  fieldset > div > .center1 > input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .circle1 {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    right: 36%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    background: linear-gradient(#e257e9, #f4ae7b);
+    animation: downUp 1.5s alternate-reverse infinite;
+  }
+  .circle2 {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    background: linear-gradient(#4887fe, #87d2cf);
+    animation: upDown 1.5s alternate-reverse infinite;
+  }
+  .circle3 {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 100%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    background: linear-gradient(45deg, #ffc9f3 40%, #bbd3ff);
+  }
+  .circle4 {
+    width: 510px;
+    height: 510px;
+    position: absolute;
+    top: 0%;
+    left: 1500px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    background: linear-gradient(30deg, #eea8ff, #20fa9b);
+  }
+  @keyframes downUp {
+    from {
+      top: 30%;
+    }
+    to {
+      top: 25%;
+    }
+  }
+  @keyframes upDown {
+    from {
+      top: 65%;
+    }
+    to {
+      top: 70%;
+    }
+  }
+  a,
+  p {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.67);
+  }
+  .bar > ul {
+    display: flex;
+    width: 450px;
+    padding: 0;
+    justify-content: center;
+  }
+  .bar > ul > button {
+    font-size: 13px;
+    margin: auto 5px;
+    color: rgba(0, 0, 0, 0.67);
+    margin-top: 10px;
+    --color: #560bad;
+ font-family: inherit;
+ display: inline-block;
+ width: 8em;
+ height: 2.6em;
+ line-height: 2.5em;
+ margin: 20px;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid var(--color);
+ transition: color .5s;
+ z-index: 1;
+ font-size: 17px;
+ border-radius: 6px;
+ font-weight: 500;
+ color: var(--color);
+  }
+  
+
+  ul {
+    list-style: none;
+  }
+  .menu {
+    width: 200px;
+    display: flex;
+    transition: 0.3s;
+    position: absolute;
+    z-index: 999;
+    top: 90%;
+  }
+  .menu > p {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+  }
+  .menu:hover {
+    width: 1250px;
+  }
+  .menu:hover > a {
+    width: 150px;
+  }
+  .menu > a {
+    height: 75px;
+    line-height: 75px;
+    color: black;
+    text-decoration: none;
+    width: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: rgb(151, 235, 235);
+    text-align: center;
+  }
+  .menu > a:hover {
+    color: white;
+    background-color: hotpink;
+  }

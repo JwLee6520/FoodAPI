@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.map_wrap,
+.map_wrap * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    font-size: 12px;
+}
+
+.map_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.map_wrap form {
+    position: absolute;
+    top: 10px;
+    /* 적절한 위치 조정 */
+    left: 10px;
+    /* 적절한 위치 조정 */
+    z-index: 2;
+    /* 지도 위에 올라오도록 설정 */
+}
+
+.scoolBtn {
+    position: absolute;
+    top: 10px;
+    right: 370px;
+    z-index: 1;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid white;
+    background-color: rgb(115, 196, 228);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+#category {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    border-radius: 5px;
+    border: 1px solid #909090;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#category li {
+    float: left;
+    list-style: none;
+    width: 50px;
+    border-right: 1px solid #acacac;
+    padding: 6px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#category li.on {
+    background: #eee;
+}
+
+#category li:hover {
+    background: #ffe6e6;
+    border-left: 1px solid #acacac;
+    margin-left: -1px;
+}
+
+#category li:last-child {
+    margin-right: 0;
+    border-right: 0;
+}
+
+#category li span {
+    display: block;
+    margin: 0 auto 3px;
+    width: 27px;
+    height: 28px;
+}
+
+#category li .category_bg {
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png) no-repeat;
+}
+
+#category li .restaurant {
+    background-position: -10px -180px;
+}
+
+#category li.on .category_bg {
+    background-position-x: -46px;
+}
+
+.selected-district {
+    background-color: #3992a8;
+    color: #fff;
+}
+
+/* 드롭다운 컨텐츠 */
+.dropdown {
+    position: absolute;
+    padding: 12px 40px;
+    top: 5px;
+    right: 160px;
+    z-index: 2;
+    background-color: skyblue;
+    color: black;
+    border-radius: 10px;
+    border: .5px solid;
+    font-weight: bold;
+}
+
+.dropdownbtn {
+    width: 100px;
+    height: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-height: 300px;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+/* 드롭다운 내 아이템 */
+.dropdown-content div {
+    color: black;
+    /* 텍스트 색상 */
+    padding: 12px 16px;
+    /* 내부 패딩 */
+}
+
+/* 드롭다운 내 아이템에 호버 효과 */
+.dropdown-content div:hover {
+    background-color: #ddd;
+    /* 호버 시 배경색 변경 */
+}
+
+/* 드롭다운 컨텐츠가 보여질 때 */
+.dropdown-content.show {
+    display: block;
+    /* 보이게 함 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.map_wrap,
+.map_wrap * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+    font-size: 12px;
+}
+
+.map_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.map_wrap form {
+    position: absolute;
+    top: 10px;
+    /* 적절한 위치 조정 */
+    left: 10px;
+    /* 적절한 위치 조정 */
+    z-index: 2;
+    /* 지도 위에 올라오도록 설정 */
+}
+
+
+#category {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    border-radius: 5px;
+    border: 1px solid #909090;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#category li {
+    float: left;
+    list-style: none;
+    width: 50px;
+    border-right: 1px solid #acacac;
+    padding: 6px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#category li.on {
+    background: #eee;
+}
+
+#category li:hover {
+    background: #ffe6e6;
+    border-left: 1px solid #acacac;
+    margin-left: -1px;
+}
+
+#category li:last-child {
+    margin-right: 0;
+    border-right: 0;
+}
+
+#category li span {
+    display: block;
+    margin: 0 auto 3px;
+    width: 27px;
+    height: 28px;
+}
+
+#category li .category_bg {
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_category.png) no-repeat;
+}
+
+#category li .restaurant {
+    background-position: -10px -180px;
+}
+
+#category li.on .category_bg {
+    background-position-x: -46px;
+}
+
+.placeinfo_wrap {
+    position: absolute;
+    bottom: 28px;
+    left: -150px;
+    width: 300px;
+}
+
+.selected-district {
+    background-color: #3992a8;
+    color: #fff;
+}
+
+/* 드롭다운 컨텐츠 */
+.dropdown {
+    position: absolute;
+    padding: 12px 40px;
+    top: 5px;
+    right: 160px;
+    z-index: 2;
+
+    color: #fff;
+    border-radius: 10px;
+}
+
+.dropdownbtn {
+    width: 100px;
+    height: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-height: 300px;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+/* 드롭다운 내 아이템 */
+.dropdown-content div {
+    color: black;
+    /* 텍스트 색상 */
+    display: flex;
+    justify-content: center;
+    padding: 12px 16px;
+    width: 170px;
+    /* 내부 패딩 */
+}
+
+/* 드롭다운 내 아이템에 호버 효과 */
+.dropdown-content div:hover {
+    background-color: #ddd;
+    /* 호버 시 배경색 변경 */
+}
+
+/* 드롭다운 컨텐츠가 보여질 때 */
+.dropdown-content.show {
+    display: block;
+    /* 보이게 함 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#placesList li {
+    list-style: none;
+}
+
+
+#menu_wrap {
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 메뉴를 왼쪽에 위치 */
+    overflow-y: auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 2;
+}
+
+#placesList .item:hover {
+    background-color: #f5f5f5;
+}
+
+
+#pagination {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#pagination a {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 5px 10px;
+    background: #f2f2f2;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+#pagination a.on {
+    background: #0056b3;
+    color: #fff;
+    border: 1px solid #0056b3;
+}
+
+.bg_white {
+    background: white;
+    padding: 10px;
+}
+
+.option {
+    padding: 10px 0;
+}
+
+#placesList {
+    list-style: none;
+    padding: 0;
+}
+
+#placesList .item {
+    position: relative;
+    border-bottom: 1px solid #888;
+    cursor: pointer;
+    min-height: 65px;
+}
+
+#placesList .item span {
+    display: block;
+    margin-top: 4px;
+}
+
+#placesList .item h5,
+#placesList .item .info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#placesList .item .info {
+    padding: 10px 0 10px 55px;
+}
+
+#placesList .info .gray {
+    color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+    padding-left: 26px;
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+}
+
+#placesList .info .tel {
+    color: #009900;
+}
+
+#placesList .item .markerbg {
+    float: left;
+    position: absolute;
+    width: 36px;
+    height: 37px;
+    margin: 10px 0 0 10px;
+    background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;
+}
+
+#placesList .item .marker_1 {
+    background-position: 0 -10px;
+}
+
+#placesList .item .marker_2 {
+    background-position: 0 -56px;
+}
+
+#placesList .item .marker_3 {
+    background-position: 0 -102px;
+}
+
+#placesList .item .marker_4 {
+    background-position: 0 -148px;
+}
+
+#placesList .item .marker_5 {
+    background-position: 0 -194px;
+}
+
+#placesList .item .marker_6 {
+    background-position: 0 -240px;
+}
+
+#placesList .item .marker_7 {
+    background-position: 0 -286px;
+}
+
+#placesList .item .marker_8 {
+    background-position: 0 -332px;
+}
+
+#placesList .item .marker_9 {
+    background-position: 0 -378px;
+}
+
+#placesList .item .marker_10 {
+    background-position: 0 -423px;
+}
+
+#placesList .item .marker_11 {
+    background-position: 0 -470px;
+}
+
+#placesList .item .marker_12 {
+    background-position: 0 -516px;
+}
+
+#placesList .item .marker_13 {
+    background-position: 0 -562px;
+}
+
+#placesList .item .marker_14 {
+    background-position: 0 -608px;
+}
+
+#placesList .item .marker_15 {
+    background-position: 0 -654px;
+}
